@@ -39,23 +39,36 @@ class Id extends StatelessWidget {
                           Container(
                             width: deviceWidth * 0.35,
                             height: deviceWidth * 0.35,
+                            padding: const EdgeInsets.all(5),
                             decoration: const BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(99)),
+                                color: Colors.orange),
+                            child: Container(
+                              // width: deviceWidth,
+                              // height: deviceWidth,
+                              decoration: const BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(99)),
                                 image: DecorationImage(
                                     image: AssetImage('assets/images/user.png'),
                                     fit: BoxFit.cover),
-                                color: Colors.orange),
+                              ),
+                            ),
                           ),
                           const Text(
                             "Adarsh Kunwar",
                             style: TextStyle(color: Colors.white, fontSize: 30),
                             textAlign: TextAlign.center,
-                          )
+                          ),
+                          const Text(
+                            "A DEVELOPER",
+                            style: TextStyle(color: Colors.white, fontSize: 12),
+                            textAlign: TextAlign.center,
+                          ),
                         ],
                       ),
                     ),
-                    Container()
                   ]),
                 ),
                 Container(
@@ -66,6 +79,41 @@ class Id extends StatelessWidget {
                           topLeft: Radius.circular(300),
                           topRight: Radius.circular(300))),
                   height: deviceHeight * 0.35,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        child: const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("ID NO: 00000000",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16)),
+                            Text("DOB : 27th May, 2003",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16)),
+                            Text("Blood Group: A+",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16)),
+                            Text("Email: Email@gmail.com",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16)),
+                            Text("ID NO: 00000000",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16)),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: 220,
+                        height: 100,
+                        decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/bar.jpg'),
+                                fit: BoxFit.cover)),
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),
