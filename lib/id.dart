@@ -8,11 +8,12 @@ class Id extends StatefulWidget {
 }
 
 class _IdState extends State<Id> {
+  bool flipped = true;
+  Map<String, dynamic> users = {"userImage": "assets/images/user.png"};
   @override
   Widget build(BuildContext context) {
     double deviceHeight = MediaQuery.of(context).size.height;
     double deviceWidth = MediaQuery.of(context).size.width;
-    bool flipped = true;
     return Scaffold(
       body: Column(
         children: [
@@ -53,12 +54,11 @@ class _IdState extends State<Id> {
                                   child: Container(
                                     // width: deviceWidth,
                                     // height: deviceWidth,
-                                    decoration: const BoxDecoration(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(99)),
+                                    decoration: BoxDecoration(
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(99)),
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/images/user.png'),
+                                          image: AssetImage(users['userImage']),
                                           fit: BoxFit.cover),
                                     ),
                                   ),
@@ -116,14 +116,16 @@ class _IdState extends State<Id> {
                                         fontSize: 16)),
                               ],
                             ),
-                            Container(
-                              width: 220,
-                              height: 100,
-                              decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                      image:
-                                          AssetImage('assets/images/bar.jpg'),
-                                      fit: BoxFit.cover)),
+                            Expanded(
+                              child: Container(
+                                // width: 220,
+                                // height: 100,
+                                decoration: const BoxDecoration(
+                                    image: DecorationImage(
+                                        image:
+                                            AssetImage('assets/images/bar.jpg'),
+                                        fit: BoxFit.cover)),
+                              ),
                             )
                           ],
                         ),
